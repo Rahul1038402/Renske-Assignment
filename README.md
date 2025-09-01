@@ -23,10 +23,10 @@ A production-ready Bollinger Bands indicator built with Next.js, TypeScript, Tai
 ## 📊 Features
 
 ### Core Functionality
-- ✅ **Bollinger Bands Calculation**: Implements the complete Bollinger Bands algorithm
-- ✅ **Real-time Updates**: Settings changes update the chart immediately
-- ✅ **Professional UI**: TradingView-inspired settings modal with tabs
-- ✅ **Interactive Chart**: Built with KLineCharts for smooth performance
+- **Bollinger Bands Calculation**: Implements the complete Bollinger Bands algorithm
+- **Real-time Updates**: Settings changes update the chart immediately
+- **Professional UI**: TradingView-inspired settings modal with tabs
+- **Interactive Chart**: Built with KLineCharts for smooth performance
 
 ### Bollinger Bands Settings
 
@@ -121,11 +121,15 @@ npm run lint
 
 ## 📸 Screenshots
 
-The application includes:
-1. **Main Chart View**: Candlestick chart with Bollinger Bands overlay
-2. **Settings Modal**: Two-tab interface (Inputs/Style) matching TradingView UX
-3. **Real-time Updates**: All changes reflect immediately on the chart
-4. **Status Bar**: Shows current indicator parameters
+### 1. Main Chart View
+![Main Chart](./public/screenshots/Dashboard.png)
+
+### 2. Settings Modal
+![Settings Modal](./public/screenshots/Input.png)
+
+### 3. Status Bar
+![Status Bar](./public/screenshots/Styles.png)
+
 
 ## 🧪 Testing the Implementation
 
