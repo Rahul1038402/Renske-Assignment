@@ -1,28 +1,44 @@
 declare module 'klinecharts' {
   export interface KLineChart {
-    applyNewData(data: any[]): void;
+    applyNewData(data: KLineData[]): void;
     removeOverlay(groupId?: string): void;
     createOverlay(overlay: OverlayCreate): string | null;
     getDom(): HTMLElement;
     getSize(): { width: number; height: number };
   }
 
+  export interface KLineData {
+    timestamp: number;
+    open: number;
+    high: number;
+    low: number;
+    close: number;
+    volume: number;
+  }
+
+  export interface OverlayEvent {
+    currentTarget: KLineChart;
+    timestamp: number;
+    dataIndex: number;
+    value: number;
+  }
+
   export interface OverlayCreate {
     name: string;
     groupId?: string;
     points?: Array<{ timestamp: number; dataIndex?: number; value?: number }>;
-    styles?: any;
-    onDrawStart?: (event: any) => boolean;
-    onDrawing?: (event: any) => boolean;
-    onDrawEnd?: (event: any) => boolean;
-    onClick?: (event: any) => boolean;
-    onDoubleClick?: (event: any) => boolean;
-    onRightClick?: (event: any) => boolean;
-    onPressedMoveStart?: (event: any) => boolean;
-    onPressedMoving?: (event: any) => boolean;
-    onPressedMoveEnd?: (event: any) => boolean;
-    onMouseEnter?: (event: any) => boolean;
-    onMouseLeave?: (event: any) => boolean;
+    styles?: Record<string, unknown>;
+    onDrawStart?: (event: OverlayEvent) => boolean;
+    onDrawing?: (event: OverlayEvent) => boolean;
+    onDrawEnd?: (event: OverlayEvent) => boolean;
+    onClick?: (event: OverlayEvent) => boolean;
+    onDoubleClick?: (event: OverlayEvent) => boolean;
+    onRightClick?: (event: OverlayEvent) => boolean;
+    onPressedMoveStart?: (event: OverlayEvent) => boolean;
+    onPressedMoving?: (event: OverlayEvent) => boolean;
+    onPressedMoveEnd?: (event: OverlayEvent) => boolean;
+    onMouseEnter?: (event: OverlayEvent) => boolean;
+    onMouseLeave?: (event: OverlayEvent) => boolean;
   }
 
   export interface ChartOptions {

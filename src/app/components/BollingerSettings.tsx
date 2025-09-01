@@ -19,7 +19,7 @@ const BollingerSettings: React.FC<BollingerSettingsProps> = ({
 }) => {
   const [activeTab, setActiveTab] = useState<'inputs' | 'style'>('inputs');
 
-  const handleInputChange = (key: keyof BollingerBandsSettings['inputs'], value: any) => {
+  const handleInputChange = (key: keyof BollingerBandsSettings['inputs'], value: number | string) => {
     const newSettings = {
       ...settings,
       inputs: {
@@ -33,7 +33,7 @@ const BollingerSettings: React.FC<BollingerSettingsProps> = ({
   const handleStyleChange = (
     section: keyof BollingerBandsSettings['style'], 
     key: string, 
-    value: any
+    value: number | string | boolean
   ) => {
     const newSettings = {
       ...settings,
