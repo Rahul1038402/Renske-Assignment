@@ -69,19 +69,19 @@ This implementation uses **sample standard deviation** (N-1 divisor) for consist
 ```
 findscan-bollinger-bands/
 ├── app/
-│   ├── globals.css          # Global styles with Tailwind
-│   ├── layout.tsx           # Root layout component
-│   └── page.tsx             # Main page with chart and controls
+│   ├── globals.css             # Global styles with Tailwind
+│   ├── layout.tsx              # Root layout component
+│   └── page.tsx                # Main page with chart and controls
 ├── components/
-│   ├── Chart.tsx            # KLineCharts wrapper with Bollinger overlay
-│   └── BollingerSettings.tsx # Settings modal component
+│   ├── Chart.tsx               # KLineCharts wrapper with Bollinger overlay
+│   └── BollingerSettings.tsx   # Settings modal component
 ├── lib/
 │   ├── indicators/
-│   │   └── bollinger.ts     # Bollinger Bands calculation logic
-│   └── types.ts             # TypeScript type definitions
+│   │   └── bollinger.ts        # Bollinger Bands calculation logic
+│   └── types.ts                # TypeScript type definitions
 ├── public/
 │   └── data/
-│       └── ohlcv.json       # Sample OHLCV data (200+ candles)
+│       └── ohlcv.json          # Sample OHLCV data (200+ candles)
 └── [config files...]
 ```
 
@@ -153,19 +153,6 @@ npm run lint
 - **Chart Library**: Limited to KLineCharts capabilities for advanced customization
 - **Mobile**: Optimized for desktop use (responsive design could be enhanced)
 - **Data Source**: Currently uses static JSON data (easily replaceable with live feeds)
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-```bash
-npm run build
-# Deploy to Vercel, Netlify, or any static hosting
-```
-
-### Docker (Optional)
-```bash
-# Create Dockerfile if needed for containerized deployment
-```
 
 ---
 
